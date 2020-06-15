@@ -26,6 +26,8 @@
 | [CATHacks](https://cathacks-online-hackathon.devpost.com/submissions) | 4-5 April | Devpost | Submitted - Favourable reviews by judges |
 | [HackQuarantine](https://hackquarantine.devpost.com/) | 21 March-13 April | Devpost | Submitted - Favourable reviews by judges and organizers |
 | [HackOn](https://hackon.devfolio.co/) | 11 April-19 April | Devfolio | Best Hack using Google Cloud |
+| [Hack:now](https://hack-now.devpost.com/) | April 2020 | Devpost | Submitted; Failed |
+| [EarthXhacks](https://earthxhack20.devpost.com/) | May 2020 | Devpost | Submitted; Failed |
 | [HackInTine](https://precisely.co.in/hackintine/) | 1 June-9 June | Precisely | Top 5 out of 34 teams |
 | [Lensathon](https://skillenza.com/challenge/snap-lensathon) | 9 May-6 June | Snapchat, Skillenza | Submitted: waiting for results |
 | [Hack the Northeast](https://htne.devpost.com/) | Jun 8 – 11 | Devpost | 1st Prize in Best Financial Empowerment Hack |
