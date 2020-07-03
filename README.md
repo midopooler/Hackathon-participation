@@ -29,7 +29,7 @@
 26| [Hack:now](https://hack-now.devpost.com/) | April 2020 | Devpost | Submitted; Failed |
 27| [EarthXhacks](https://earthxhack20.devpost.com/) | May 2020 | Devpost | Submitted; Failed |
 28| [HackInTine](https://precisely.co.in/hackintine/) | 1 June-9 June 2020 | Precisely | Top 5 out of 34 teams |
-29| [Lensathon](https://skillenza.com/challenge/snap-lensathon) | 9 May-6 June 2020 | Snapchat, Skillenza | Submitted: waiting for results |
+29| [Lensathon](https://skillenza.com/challenge/snap-lensathon) | 9 May-6 June 2020 | Snapchat, Skillenza | Submitted: failed to unknown reasons |
 30| [Hack the Northeast](https://htne.devpost.com/) | Jun 8 – 11 2020 | Devpost | 1st Prize in Best Financial Empowerment Hack |
 31| [Dishathon](https://incubateind.com/dishathon2020/) | Jun 19 - 21 2020 | IncubateIND | Grand Finalist : Last round pending |
 32| [ThoughtWorks Social Hackathpn](https://dare2compete.com/o/thoughtworks-the-social-hackathon-thoughtworks-technologies-111680) | Jun 27 2020 | ThoughtWorks | First prize winner; 700$ |
