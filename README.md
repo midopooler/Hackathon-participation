@@ -13,7 +13,7 @@
 10| [IncubateIND Innovation Series Hackathon Powered by Microsoft](https://twitter.com/IncubateIND/status/1208667559144218624) | 21-22 December 2019 | Microsoft Gurgaon | 3rd Place Win |
 11| [Innovacer HackerCamp 2019](https://twitter.com/innovaccer/status/1197567144738738176) | 15-16 December 2019 | Innovaccer Noida | Top 15 |
 12| [h@ckGTBIT2.0](https://helloworldofficial.in/hack-gtbit-2.0) | 18-19 January | GTBIT | Best B-Plan Title Winners |
-13| [Build For Digital India by Google, MHRD and MeiTy](https://events.withgoogle.com/buildfordigitalindia/bfdi-finalists/#content) | 21-22 January 2020 | Google Gurgaon | Top 15 pan India; Final Results pending  |
+13| [Build For Digital India by Google, MHRD and MeiTy](https://events.withgoogle.com/buildfordigitalindia/bfdi-finalists/#content) | 21-22 January 2020 | Google Gurgaon | Top 15 pan India  |
 14| [hackVSIT](https://2020.hack-vsit.tech/) | 31Jan-1Feb 2020 | VIPS | VoiceFlow Title winners |
 15| [iXi Hackathon](https://ixi.uincept.com/hackathon) | 3-4 Feb 2020 | UIncept | 2nd Place Win |
 16| [HackBMU](https://www.hackbmu.com/) | 15-16 Feb 2020 | BMU, Gurgaon | Submitted, Failed |
