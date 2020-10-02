@@ -1,5 +1,6 @@
 const url = "https://spreadsheets.google.com/feeds/list/1-cvS-r8_Xf9-CMedUa3BFR-2AulcdfCuzI8YswUR7hk/1/public/full?alt=json";
 const cardsContainer = document.getElementById("cards_container")
+const cards_section = document.getElementById("cards_section");
 let data = []
 window.onload = fetchData
 
@@ -10,6 +11,7 @@ function fetchData() {
       data = result.feed.entry;
       console.log(data)
       setCards()
+      cards_section.style.display = "block"
     })
     .catch((err) => {
       console.log(err);

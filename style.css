@@ -9,8 +9,17 @@ body {
 
 }
 
-#carousel {
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 
+#carousel {
+    display: none;
     width: 100%;
 }
 
@@ -32,15 +41,15 @@ body {
     height: auto;
 }
 
-/* Fading animation */
-.fadeIn {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
+/* swipe animation */
+.swipeRight {
+    -webkit-animation-name: swipeR;
+    -webkit-animation-duration: .5s;
+    animation-name: swipeR;
     animation-duration: .5s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes swipeR {
     from {
         transform: translateX(+40px);
     }
@@ -50,9 +59,36 @@ body {
     }
 }
 
-@keyframes fade {
+@keyframes swipeR {
     from {
         transform: translateX(+40px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.swipeLeft {
+    -webkit-animation-name: swipeL;
+    -webkit-animation-duration: .5s;
+    animation-name: swipeL;
+    animation-duration: .5s;
+}
+
+@-webkit-keyframes swipeL {
+    from {
+        transform: translateX(-40px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes swipeL {
+    from {
+        transform: translateX(-40px);
     }
 
     to {
@@ -121,6 +157,7 @@ body {
 
 
 #cards_section {
+    display: none;
     margin-top: 100px;
 }
 
@@ -167,4 +204,9 @@ body {
     overflow: hidden;
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    .mainHeading {
+        margin-top: 20px;
+        font-size: 2rem !important;
+    }
+}

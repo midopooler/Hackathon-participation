@@ -4,6 +4,8 @@ let slideIndex = 0;
 const slideTimeInterval = 3000;
 const carContainer = document.querySelector(".carousel_container");
 const dots = document.querySelector(".dots");
+const loader = document.getElementById("loader");
+const carousel = document.getElementById("carousel");
 
 function fetchApiData() {
   fetch(apiurl)
@@ -12,6 +14,8 @@ function fetchApiData() {
       let data = result.feed.entry;
       console.log(data);
       setCarouselImages(data);
+      loader.style.display = "none";
+      carousel.style.display = "block"
     })
     .catch((err) => {
       console.log(err);
@@ -25,7 +29,7 @@ function setCarouselImages(data = []) {
 
   data.forEach((d, i) => {
     console.log(i);
-    temp += `<div class="caro_image fadeIn">
+    temp += `<div class="caro_image swipeRight">
     <img src=${extractor(parseKey(d, "images"))} />
   </div>`;
     dots.innerHTML += `<div class="dot" onclick="setSlide(${i})"></div>`;
@@ -41,10 +45,14 @@ function parseKey(obj, key) {
 }
 
 function moveSlide(m) {
-  setSlide((slideIndex += m));
+  if (m == -1)
+    setSlide(slideIndex += m, true);
+  else
+    setSlide(slideIndex += m);
 }
 
-function setSlide(n) {
+function setSlide(n, swipeLeft) {
+  console.log(n)
   const slides = document.getElementsByClassName("caro_image");
   const dots = document.getElementsByClassName("dot");
   if (n == -1) slideIndex = slides.length - 1;
@@ -59,6 +67,11 @@ function setSlide(n) {
   });
 
   console.log(n, slideIndex, slides);
+  if (swipeLeft) {
+    console.log(swipeLeft);
+    slides[slideIndex].classList.remove('swipeRight')
+    slides[slideIndex].classList.add('swipeLeft')
+  }
   slides[slideIndex].style.display = "block";
   dots[slideIndex].classList.add("active_dot");
 }
