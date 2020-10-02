@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+#carousel {
+
+    width: 100%;
+}
+
+.carousel_container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    border: 1px black solid;
+}
+
+.caro_image {
+    max-width: 100%;
+    margin: auto;
+    display: none;
+}
+
+.caro_image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Fading animation */
+.fadeIn {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+.side_arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: 3rem;
+    color: #e9ecef;
+    margin-left: 2rem;
+}
+
+.side_arrow.right {
+    right: 0px;
+    margin-right: 2rem;
+}
+
+.side_arrow i {
+    font-weight: bolder;
+}
+
+
+.carousel_container:hover .side_arrow {
+    display: block;
+}
+
+.dots {
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    cursor: pointer;
+    display: inline-block;
+    background-color: grey;
+    height: 10px;
+    width: 20px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.dot:hover {
+    background-color: #000000ba;
+}
+
+.active_dot {
+    width: 30px;
+    background-color: black;
+
+}
+
+.side_arrow {
+    cursor: pointer;
+}
+
+
+#cards_container a {
+    min-height: 15rem;
+}
+
+#cards_container a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(211 214 159 / 74%);
+    transition: 0.3s;
+    padding: 1rem;
+    font-size: .9rem;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.card:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.card i {
+    width: 1rem;
+    margin-right: 5px;
+}
+
+.card:hover>.desc {
+    max-height: 500px;
+
+}
+
+.desc {
+
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+    overflow: hidden;
+}
