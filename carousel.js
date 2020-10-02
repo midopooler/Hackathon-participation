@@ -19,6 +19,7 @@ function fetchApiData() {
 }
 
 fetchApiData();
+
 function setCarouselImages(data = []) {
   let temp = "";
 
@@ -32,8 +33,9 @@ function setCarouselImages(data = []) {
 
   carContainer.innerHTML += temp;
   setSlide(slideIndex);
-  setInterval(() => setSlide(slideIndex + 1), slideTimeInterval);
+  //setInterval(() => setSlide(slideIndex + 1), slideTimeInterval);
 }
+
 function parseKey(obj, key) {
   return obj["gsx$" + key].$t.trim();
 }
@@ -67,7 +69,7 @@ function extractor(url_id) {
     if (url_id.search("google.com") != -1) {
       var id = url_id.split("/");
       console.log(id);
-      var url = "https://drive.google.com/thumbnail?id=" + id[5];
+      var url = "https://drive.google.com/uc?export=view&id=" + id[5];
     } else url = url_id;
 
     return url;

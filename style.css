@@ -1,3 +1,7 @@
+body {
+    background-color: #f8f9fa !important;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -14,7 +18,7 @@
     position: relative;
     width: 100%;
     margin: auto;
-    border: 1px black solid;
+
 }
 
 .caro_image {
@@ -33,26 +37,26 @@
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: .5s;
 }
 
 @-webkit-keyframes fade {
     from {
-        opacity: .4
+        transform: translateX(+40px);
     }
 
     to {
-        opacity: 1
+        transform: translateX(0px);
     }
 }
 
 @keyframes fade {
     from {
-        opacity: .4
+        transform: translateX(+40px);
     }
 
     to {
-        opacity: 1
+        transform: translateX(0px);
     }
 }
 
@@ -94,19 +98,20 @@
     cursor: pointer;
     display: inline-block;
     background-color: grey;
-    height: 10px;
-    width: 20px;
-    border-radius: 10px;
-    transition: .3s ease-in-out;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin: 0px 2px;
+    transition: width .3s ease-in-out;
 }
 
 .dot:hover {
-    background-color: #000000ba;
+    background-color: #8490ff;
 }
 
 .active_dot {
-    width: 30px;
-    background-color: black;
+
+    background-color: #8490ff;
 
 }
 
@@ -115,18 +120,23 @@
 }
 
 
-#cards_container a {
-    min-height: 15rem;
+#cards_section {
+    margin-top: 100px;
 }
+
 
 #cards_container a:hover {
     color: black;
     text-decoration: none;
 }
 
+.parentcardbox {
+    min-height: 15rem;
+}
+
 .card {
     background-color: white;
-    box-shadow: 0 2px 4px 0 rgb(211 214 159 / 74%);
+    box-shadow: 0 2px 4px 0 #8490ff;
     transition: 0.3s;
     padding: 1rem;
     font-size: .9rem;
@@ -156,3 +166,5 @@
     transition: max-height .3s ease-in-out;
     overflow: hidden;
 }
+
+@media (max-width: 576px) {}
