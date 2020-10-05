@@ -1,7 +1,7 @@
 let apiurl =
   "https://spreadsheets.google.com/feeds/list/1zzlJAXOy3OZdHm9U29Gose7GB1IfYp64NCW7NP47iTk/1/public/full?alt=json";
 let slideIndex = 0;
-const slideTimeInterval = 3000;
+const slideTimeInterval = 5000;
 const carContainer = document.querySelector(".carousel_container");
 const dots = document.querySelector(".dots");
 const loader = document.getElementById("loader");
@@ -15,7 +15,7 @@ function fetchApiData() {
       console.log(data);
       setCarouselImages(data);
       loader.style.display = "none";
-      carousel.style.display = "block"
+      carousel.style.display = "block";
     })
     .catch((err) => {
       console.log(err);
@@ -37,7 +37,7 @@ function setCarouselImages(data = []) {
 
   carContainer.innerHTML += temp;
   setSlide(slideIndex);
-  //setInterval(() => setSlide(slideIndex + 1), slideTimeInterval);
+  setInterval(() => setSlide(slideIndex + 1), slideTimeInterval);
 }
 
 function parseKey(obj, key) {
@@ -45,14 +45,12 @@ function parseKey(obj, key) {
 }
 
 function moveSlide(m) {
-  if (m == -1)
-    setSlide(slideIndex += m, true);
-  else
-    setSlide(slideIndex += m);
+  if (m == -1) setSlide((slideIndex += m), true);
+  else setSlide((slideIndex += m));
 }
 
 function setSlide(n, swipeLeft) {
-  console.log(n)
+  console.log(n);
   const slides = document.getElementsByClassName("caro_image");
   const dots = document.getElementsByClassName("dot");
   if (n == -1) slideIndex = slides.length - 1;
@@ -67,10 +65,14 @@ function setSlide(n, swipeLeft) {
   });
 
   console.log(n, slideIndex, slides);
+  if (!swipeLeft && slides[slideIndex].classList.contains("swipeLeft")) {
+    console.log("true ..");
+    slides[slideIndex].classList.replace("swipeLeft", "swipeRight");
+  }
   if (swipeLeft) {
     console.log(swipeLeft);
-    slides[slideIndex].classList.remove('swipeRight')
-    slides[slideIndex].classList.add('swipeLeft')
+    slides[slideIndex].classList.remove("swipeRight");
+    slides[slideIndex].classList.add("swipeLeft");
   }
   slides[slideIndex].style.display = "block";
   dots[slideIndex].classList.add("active_dot");

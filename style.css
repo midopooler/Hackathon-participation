@@ -1,12 +1,14 @@
 body {
     background-color: #f8f9fa !important;
+    font-family: 'Poppins', sans-serif !important;
+
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
+    color: white
 }
 
 #loader {
@@ -18,9 +20,18 @@ body {
     overflow: hidden;
 }
 
+.mainHeading {
+    font-size: 3.5rem;
+
+    line-height: 1.2;
+    font-weight: 100;
+}
+
 #carousel {
     display: none;
     width: 100%;
+    background-color: #8490ff;
+
 }
 
 .carousel_container {
@@ -175,11 +186,12 @@ body {
     background-color: white;
     box-shadow: 0 2px 4px 0 #8490ff;
     transition: 0.3s;
-    padding: 1rem;
+
     font-size: .9rem;
     cursor: pointer;
     color: black;
     text-decoration: none;
+    margin-bottom: 30px;
 }
 
 .card:hover {
@@ -192,9 +204,18 @@ body {
     margin-right: 5px;
 }
 
-.card:hover>.desc {
+.card_body:hover>.desc {
     max-height: 500px;
 
+}
+
+.card_body {
+    padding: 1rem;
+}
+
+.card_body div,
+span {
+    color: black;
 }
 
 .desc {
@@ -204,9 +225,18 @@ body {
     overflow: hidden;
 }
 
+.card h5 {
+    padding: .5rem 1rem;
+    background-color: #8490ff;
+}
+
 @media (max-width: 576px) {
+    #cards_section {
+        margin-top: 50px;
+    }
+
     .mainHeading {
-        margin-top: 20px;
+
         font-size: 2rem !important;
     }
 }
