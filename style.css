@@ -38,6 +38,10 @@ body {
   margin: auto;
 }
 
+.drop_down{
+  text-align: end;
+}
+
 .caro_image {
   max-width: 100%;
   margin: auto;
