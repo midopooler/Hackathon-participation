@@ -12,7 +12,7 @@ function fetchApiData() {
     .then((res) => res.json())
     .then((result) => {
       let data = result.feed.entry;
-      console.log(data);
+      //console.log(data);
       setCarouselImages(data);
       loader.style.display = "none";
       carousel.style.display = "block";
@@ -28,7 +28,7 @@ function setCarouselImages(data = []) {
   let temp = "";
 
   data.forEach((d, i) => {
-    console.log(i);
+    //console.log(i);
     temp += `<div class="caro_image swipeRight">
     <img src=${extractor(parseKey(d, "images"))} />
   </div>`;
@@ -50,7 +50,7 @@ function moveSlide(m) {
 }
 
 function setSlide(n, swipeLeft) {
-  console.log(n);
+  //console.log(n);
   const slides = document.getElementsByClassName("caro_image");
   const dots = document.getElementsByClassName("dot");
   if (n == -1) slideIndex = slides.length - 1;
@@ -64,13 +64,13 @@ function setSlide(n, swipeLeft) {
     d.classList.remove("active_dot");
   });
 
-  console.log(n, slideIndex, slides);
+  //console.log(n, slideIndex, slides);
   if (!swipeLeft && slides[slideIndex].classList.contains("swipeLeft")) {
-    console.log("true ..");
+    //console.log("true ..");
     slides[slideIndex].classList.replace("swipeLeft", "swipeRight");
   }
   if (swipeLeft) {
-    console.log(swipeLeft);
+    //console.log(swipeLeft);
     slides[slideIndex].classList.remove("swipeRight");
     slides[slideIndex].classList.add("swipeLeft");
   }
@@ -79,11 +79,11 @@ function setSlide(n, swipeLeft) {
 }
 
 function extractor(url_id) {
-  console.log(url_id);
+  //console.log(url_id);
   if (url_id) {
     if (url_id.search("google.com") != -1) {
       var id = url_id.split("/");
-      console.log(id);
+      //console.log(id);
       var url = "https://drive.google.com/uc?export=view&id=" + id[5];
     } else url = url_id;
 
