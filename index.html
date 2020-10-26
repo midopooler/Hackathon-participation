@@ -45,21 +45,28 @@
     </div>
   </section>
 
-  <div class="drop_down mt-3 mx-2">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Filter
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">ALL</a>
-        <a class="dropdown-item" href="#">National</a>
-        <a class="dropdown-item" href="#">International</a>
-        <a class="dropdown-item" href="#">Win</a>
-      </div>
+  <section class="mt-4 pl-3 pl-md-0 d-flex flex-wrap justify-content-start justify-content-md-around">
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-all mr-1" id="checkbox-for-all" name="all"
+        onclick="handleCheckbox(event)" checked>
+      <label class="form-check-label text-dark" for="checkbox-for-all">All</label>
     </div>
-  </div>
-
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-wononly mr-1" id="checkbox-for-wononly" name="wononly"
+        onclick="handleCheckbox(event)">
+      <label class="form-check-label text-dark" for="checkbox-for-wononly">Won Only</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-internationonly mr-1" id="checkbox-for-internationonly"
+        name="internationonly" onclick="handleCheckbox(event)">
+      <label class="form-check-label text-dark" for="checkbox-for-internationonly">International Only</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-prestigious mr-1" id="checkbox-for-prestigious" name="prestigious"
+        onclick="handleCheckbox(event)">
+      <label class="form-check-label text-dark" for="checkbox-for-prestigious">Prestigious</label>
+    </div>
+  </section>
   <section id="cards_section">
     <div id="cards_container" class="row m-0 mx-3"></div>
   </section>
